@@ -1,0 +1,68 @@
+title: 'Строй клуб - стройматериалы по доступным ценам'
+description: Nuxt UI Pro is a collection of premium Vue components built on top of Nuxt UI to create beautiful & responsive Nuxt applications in minutes.
+navigation: false
+hero:
+  title: 'Строй клуб - стройматериалы по доступным ценам'
+  description: '+7 (910) 641-04-08'
+  orientation: horizontal
+  headline:
+    label: Made with Nuxt UI Pro
+    to: https://ui.nuxt.com/pro
+    icon: i-heroicons-arrow-top-right-on-square-20-solid
+  links:
+    - label: Get started
+      icon: i-heroicons-arrow-right-20-solid
+      trailing: true
+      to: '/getting-started'
+      size: lg
+    - label: Use this template
+      icon: i-simple-icons-github
+      size: lg
+      color: gray
+      to: https://github.com/nuxt-ui-pro/docs
+      target: _blank
+  code: |
+    ```bash [Terminal]
+    npx nuxi init -t github:nuxt-ui-pro/docs
+    ```
+features:
+  title: 'Популярные товары'
+  links:
+    - label: 'Пеpемычки брусковые по сер.1.038.1-1.'
+      icon: 'i-simple-icons-nuxtdotjs'
+      trailingIcon: 'i-heroicons-arrow-right-20-solid'
+      color: 'gray'
+      to: 'https://ui.nuxt.com/pro'
+      target: '_blank'
+      size: lg
+  items:
+    - title: 'Плиты перекрытий по сер. 1.241 вып. 27, 36, 37, 39'
+      description: 'Описание: Плиты перекрытий'
+      to: '/reinforced-concrete-products'
+      img: 'https://gbi-perm.ru/upload/medialibrary/6da/6daf071f956c9300d0a9a15f1e037829.png'
+      target: '_blank'
+    - title: 'Плиты перекрытий по сер. 1.141 вып. 60, 61, 63'
+      description: 'Описание: Плиты перекрытий'
+      to: '/getting-started'
+      target: '_blank'
+      img: 'https://braersnab.ru/images/products/pk-61-12-8-%D0%90%D1%82V/plity_perekrytiy_mnogopustotnye_po_serii_ser_1141_1_v6360_pererabot_shifr_93_13363.jpg'
+    - title: 'Плиты лоджий по сер. 1.439 АР 4.10Д'
+      description: 'Описание: Плиты лоджий'
+      to: 'https://ui.nuxt.com'
+      target: '_blank'
+      img: 'https://st45.stpulscen.ru/images/product/248/084/812_big.jpg'
+    - title: 'Плиты по сер. 1.090.1-1  Вып. 5-1'
+      description: 'Описание: Плиты по сер.'
+      to: 'https://www.typescriptlang.org'
+      target: '_blank'
+      img: 'https://martand.ru/800/600/https/helpiks.org/helpiksorg/baza5/114506410634.files/image049.jpg'
+    - title: 'Плиты перекрытий облегченные 7ПК доп к сер. 1.141'
+      description: 'Описание: Плиты перекрытий облегченные'
+      to: 'https://nuxt.studio'
+      target: '_blank'
+      img: 'https://zhbi247.ru/media/djcatalog2/images/item/104/nvk-30-12-8.jpg'
+    - title: 'Плиты промышленных зданий по сер. 1.442, 1.465, 1.865'
+      description: 'Описание: Плиты промышленных зданий'
+      to: 'https://ui.nuxt.com/pro/components/docs/docs-search'
+      target: '_blank'
+      img: 'https://rtk-st.ru/wp-content/uploads/zhbi-promishlenie-zdaniya-pliti-perekritiya-rebristie-2p1.jpg'
