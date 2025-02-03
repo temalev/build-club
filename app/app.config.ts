@@ -53,7 +53,7 @@ export default defineAppConfig({
     }]
   },
   toc: {
-    title: 'Table of Contents',
+    title: 'Содержание страницы',
     bottom: {
       title: 'Community',
       edit: 'https://github.com/nuxt-ui-pro/docs/edit/main/content',

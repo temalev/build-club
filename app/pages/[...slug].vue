@@ -7,6 +7,9 @@ definePageMeta({
 
 const route = useRoute();
 const { toc, seo } = useAppConfig();
+const slug = route.params.slug[1]
+const imagesPath = `/images/products/${slug}/`
+
 
 const { data: page } = await useAsyncData(route.path, () =>
   queryContent(route.path).findOne()
@@ -35,7 +38,10 @@ useSeoMeta({
 
 defineOgImageComponent("Docs");
 
-const headline = computed(() => findPageHeadline(page.value));
+console.log(page.value.title);
+
+
+const headline = page.value.title
 
 const links = computed(() =>
   [
@@ -48,36 +54,46 @@ const links = computed(() =>
     ...(toc?.bottom?.links || []),
   ].filter(Boolean)
 );
+
+const { data: images } = await useFetch(`/api/images/${slug}`)
+
+const productImages = computed(() => {
+  if (!images.value) return []
+  return images.value.map(image => `${imagesPath}${image}`)
+})
 </script>
 
 <template>
   <UPage>
-    <UPageHeader
-      :title="page.title"
-      :description="page.description"
-      :links="page.links"
-      :headline="headline"
-    />
-    <UPageBody prose>
-      <!-- <pre>
-        {{page.products}}
-      </pre> -->
-      <UPageGrid>
-        <ULandingCard
-          v-for="(item, index) of page.products"
-          :key="index"
-          v-bind="item"
+    <div class="mb-6 mt-6">
+      <h1 class="text-3xl font-bold">{{ page.title }}</h1>
+      <p v-if="page.description" class="mt-2 text-gray-500">{{ page.description }}</p>
+      <div v-if="page.links" class="mt-4 flex gap-4">
+        <a 
+          v-for="link in page.links" 
+          :key="link.to"
+          :href="link.to"
+          :target="link.target"
+          class="inline-flex items-center gap-2 text-primary-500 hover:text-primary-600"
         >
-          <img
-            src="https://img.promindex.ru/z2YFmyuww4Hu9DuNydIiJhIFxuUz_oP5g2HxiWa30Ns/resize:fit:600:1000/format:webp/quality:90/ar:1/bG9jYWw6Ly9vcmlnaW4vMzQvMzQ0MTIzL2JvcnRvdm95LWthbWVuLWJvcmR1ci1tYWdpc3RyYWxuaXlfNTk5ODExNWQ4OGIyOS5qcGc.webp"
-            class="w-full rounded-md"
-          />
-        </ULandingCard>
-      </UPageGrid>
+          <i v-if="link.icon" :class="link.icon"></i>
+          {{ link.label }}
+        </a>
+      </div>
+    </div>
 
-      <!-- <ContentRenderer v-if="page.body" :value="page">
-
-      </ContentRenderer> -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div v-for="(image, index) in productImages" :key="index" class="aspect-square">
+        <img 
+          :src="image" 
+          :alt="`${page.title} - изображение ${index + 1}`"
+          class="w-full h-full object-cover rounded-lg"
+        >
+      </div>
+    </div>
+    
+    <UPageBody prose>
+      <ContentRenderer v-if="page.body" :value="page" />
 
       <hr v-if="surround?.length" />
 

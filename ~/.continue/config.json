@@ -1,0 +1,14 @@
+{
+  "models": [
+    {
+      "title": "DeepSeek-R1",
+      "provider": "ollama",
+      "model": "deepseek-r1:70b",
+      "ollama": {
+        "url": "http://192.168.180.2:11434"
+      },
+      "contextLength": 4096
+    }
+  ],
+  "defaultModel": "DeepSeek-R1"
+} 

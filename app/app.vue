@@ -30,6 +30,9 @@ useSeoMeta({
 })
 
 provide('navigation', navigation)
+
+console.log(files);
+
 </script>
 
 <template>

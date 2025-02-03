@@ -1,31 +1,47 @@
 <script setup lang="ts">
-import type { NavItem } from '@nuxt/content'
+import type { NavItem } from "@nuxt/content";
 
-const navigation = inject<NavItem[]>('navigation', [])
+const navigation = inject<NavItem[]>("navigation", []);
 
-const { header } = useAppConfig()
-const links = [{
-  label: 'Пенопласт',
-  to: '/docs'
-}, {
-  label: 'Раствор цементный',
-  to: '/pricing'
-}, {
-  label: 'Бордюр и поребрик по ГОСТ 6665.',
-  to: '/blog'
-}]
+const { header } = useAppConfig();
+const links = [
+  {
+    label: "Главная",
+    to: "/",
+  },
+  {
+    label: "О компании",
+    to: "/about",
+  },
+  {
+    label: "Каталог",
+    to: "/blog",
+    children: [
+      {
+        label: "Плиты перекрытий железобетонные",
+        to: "/pro/pricing",
+      },
+      {
+        label: "Фундаментные блоки ФБС",
+        to: "/pro/templates",
+      },
+    ],
+  },
+];
 </script>
 
 <template>
   <UHeader>
     <template #logo>
-      <img src="/build_club.png" alt="" width="40" height="40">
+      <img src="/build_club.png" alt="" width="40" height="40" />
     </template>
 
-    <template
-      v-if="header?.search"
-      #center
-    >
+    <template v-if="header?.search" #center>
+      <UHeaderLinks
+        :links="mapContentNavigation(navigation)"
+        style="display: flex; justify-content: center"
+        class="mr-6"
+      />
       <UContentSearchButton aria-placeholder="Поиск" class="hidden lg:flex" />
     </template>
 
@@ -37,21 +53,16 @@ const links = [{
       />
 
       <UColorModeButton v-if="header?.colorMode" />
-
-      <template v-if="header?.links">
-        <UButton
-          v-for="(link, index) of header.links"
-          :key="index"
-          v-bind="{ color: 'gray', variant: 'ghost', ...link }"
-        />
-      </template>
     </template>
 
     <template #panel>
       <UNavigationTree :links="mapContentNavigation(navigation)" />
     </template>
-    <template #bottom>
-      <UHeaderLinks :links="links" style="display: flex; justify-content: center" />
-    </template>
+    <!-- <template #bottom>
+      <UHeaderLinks
+        :links="mapContentNavigation(navigation)"
+        style="display: flex; justify-content: center"
+      />
+    </template> -->
   </UHeader>
 </template>
