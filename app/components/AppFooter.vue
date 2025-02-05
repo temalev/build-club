@@ -127,13 +127,13 @@ Email: ${formData.value.email}
     <template #right>
       <UColorModeButton v-if="footer?.colorMode" />
 
-      <template v-if="footer?.links">
+      <!-- <template v-if="footer?.links">
         <UButton
           v-for="(link, index) of footer?.links"
           :key="index"
           v-bind="{ color: 'gray', variant: 'ghost', ...link }"
         />
-      </template>
+      </template> -->
     </template>
   </UFooter>
 </template>
