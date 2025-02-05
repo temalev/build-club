@@ -26,12 +26,10 @@ features:
   items:
     - title: 'Плиты перекрытий по сер. 1.241 вып. 27, 36, 37, 39'
       description: 'Описание: Плиты перекрытий'
-      to: '/reinforced-concrete-products'
       img: 'https://gbi-perm.ru/upload/medialibrary/6da/6daf071f956c9300d0a9a15f1e037829.png'
       target: '_blank'
     - title: 'Плиты перекрытий по сер. 1.141 вып. 60, 61, 63'
       description: 'Описание: Плиты перекрытий'
-      to: '/getting-started'
       target: '_blank'
       img: 'https://braersnab.ru/images/products/pk-61-12-8-%D0%90%D1%82V/plity_perekrytiy_mnogopustotnye_po_serii_ser_1141_1_v6360_pererabot_shifr_93_13363.jpg'
     - title: 'Плиты лоджий по сер. 1.439 АР 4.10Д'

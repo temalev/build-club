@@ -1,2 +1,2 @@
 release:
-ssh -p 49443 root@e298aaaac062.vps.myjino.ru "./release.sh"
+	ssh -p 49443 root@e298aaaac062.vps.myjino.ru "./release.sh"
