@@ -9,18 +9,6 @@ hero:
     label: Made with Nuxt UI Pro
     to: https://ui.nuxt.com/pro
     icon: i-heroicons-arrow-top-right-on-square-20-solid
-  links:
-    - label: Get started
-      icon: i-heroicons-arrow-right-20-solid
-      trailing: true
-      to: '/getting-started'
-      size: lg
-    - label: Use this template
-      icon: i-simple-icons-github
-      size: lg
-      color: gray
-      to: https://github.com/nuxt-ui-pro/docs
-      target: _blank
   code: |
     ```bash [Terminal]
     npx nuxi init -t github:nuxt-ui-pro/docs
