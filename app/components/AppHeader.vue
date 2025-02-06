@@ -37,11 +37,13 @@ const links = [
     </template>
 
     <template v-if="header?.search" #center>
-      <UHeaderLinks
-        :links="mapContentNavigation(navigation)"
-        style="display: flex; justify-content: center"
-        class="mr-6"
-      />
+      <div class="hidden lg:block">
+        <UHeaderLinks
+          :links="mapContentNavigation(navigation)"
+          style="display: flex; justify-content: center"
+          class="mr-6"
+        />
+      </div>
       <UContentSearchButton aria-placeholder="Поиск" class="hidden lg:flex" />
     </template>
 
