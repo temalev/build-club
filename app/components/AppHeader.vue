@@ -4,30 +4,7 @@ import type { NavItem } from "@nuxt/content";
 const navigation = inject<NavItem[]>("navigation", []);
 
 const { header } = useAppConfig();
-const links = [
-  {
-    label: "Главная",
-    to: "/",
-  },
-  {
-    label: "О компании",
-    to: "/about",
-  },
-  {
-    label: "Каталог",
-    to: "/blog",
-    children: [
-      {
-        label: "Плиты перекрытий железобетонные",
-        to: "/pro/pricing",
-      },
-      {
-        label: "Фундаментные блоки ФБС",
-        to: "/pro/templates",
-      },
-    ],
-  },
-];
+
 </script>
 
 <template>

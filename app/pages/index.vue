@@ -3,6 +3,8 @@ const { data: page } = await useAsyncData("index", () =>
   queryContent("/").findOne()
 );
 
+const navigation = inject<NavItem[]>("navigation", []);
+
 useSeoMeta({
   titleTemplate: "",
   title: page.value.title,
@@ -10,6 +12,7 @@ useSeoMeta({
   description: page.value.description,
   ogDescription: page.value.description,
 });
+
 </script>
 
 <template>
@@ -21,7 +24,6 @@ useSeoMeta({
 
       <img src="/build_club_banner.png" alt="" height="200" />
     </ULandingHero>
-
     <ULandingSection :title="page.features.title" :links="page.features.links">
       <UPageGrid>
         <ULandingCard
