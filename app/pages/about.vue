@@ -3,7 +3,7 @@
     <ULandingHero v-if="page.hero" v-bind="page.hero" class="!pb-20 !pt-10">
       <template #title>
         <div class="flex flex-row items-center gap-8 w-full justify-center max-w-5xl mx-auto">
-          <img src="/build_club.png" alt="Строй клуб логотип" class="w-48 h-auto shrink-0" />
+          <img src="/build_club.png" alt="Железобетон62 логотип" class="w-48 h-auto shrink-0" />
           <h1 class="text-left text-6xl font-bold w-full">{{ page.hero.title.replace('{.inline}', '') }}</h1>
         </div>
       </template>
