@@ -59,5 +59,13 @@ export default defineNuxtConfig({
     }
   },
 
-  compatibilityDate: '2024-07-11'
+  compatibilityDate: '2024-07-11',
+
+  runtimeConfig: {
+    botToken: process.env.NUXT_BOT_TOKEN,
+    chatId: process.env.NUXT_CHAT_ID,
+    public: {
+      // публичные переменные если нужны
+    }
+  }
 })

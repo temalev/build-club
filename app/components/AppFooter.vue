@@ -30,9 +30,6 @@ const formData = ref({
 });
 
 const submitForm = async () => {
-  const BOT_TOKEN = '8167225654:AAGq6wv1AzWVVybUzxtTps0UuroWWwXn_RQ';
-  const CHAT_ID = '312323398';
-  
   const text = `
 Новая заявка!
 Имя: ${formData.value.name}
@@ -41,16 +38,11 @@ Email: ${formData.value.email}
   `;
 
   try {
-    await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+    await $fetch('/api/send-message', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        chat_id: CHAT_ID,
-        text: text
-      })
+      body: { text }
     });
+    
     alert('Спасибо! Ваша заявка отправлена.');
     formData.value = { name: '', phone: '', email: '' };
   } catch (error) {
