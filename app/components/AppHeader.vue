@@ -10,7 +10,7 @@ const { header } = useAppConfig();
 <template>
   <UHeader>
     <template #logo>
-      <img src="/build_club.png" alt="" width="40" height="40" />
+      <img src="/logo.svg" alt="" width="50" height="50" />
     </template>
 
     <template v-if="header?.search" #center>

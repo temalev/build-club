@@ -1,9 +1,9 @@
 title: 'Железобетон62 - стройматериалы по доступным ценам'
-description: стройматериалы по доступным ценам
+description: Стройматериалы по доступным ценам
 navigation: false
 hero:
-  title: 'Железобетон62 - стройматериалы по доступным ценам'
-  description: '+7 (910) 641-04-08'
+  title: 'Железобетон62'
+  description: 'стройматериалы по доступным ценам'
   orientation: horizontal
   headline:
     label: Made with Nuxt UI Pro
