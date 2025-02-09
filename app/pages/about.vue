@@ -1,15 +1,15 @@
 <template>
   <div>
-    <ULandingHero v-if="page.hero" v-bind="page.hero" class="!pb-20 !pt-10">
+    <!-- <ULandingHero v-if="page.hero" v-bind="page.hero" class="!pb-20 !pt-10">
       <template #title>
         <div class="flex flex-row items-center gap-8 w-full justify-center max-w-5xl mx-auto">
-          <img src="/build_club.png" alt="Железобетон62 логотип" class="w-48 h-auto shrink-0" />
+          <img src="/logo.svg" alt="Железобетон62 логотип" class="w-48 h-auto shrink-0" />
           <h1 class="text-left text-6xl font-bold w-full">{{ page.hero.title.replace('{.inline}', '') }}</h1>
         </div>
       </template>
-    </ULandingHero>
+    </ULandingHero> -->
 
-    <ULandingSection :title="page.features.title" class="!pt-0">
+    <ULandingSection :title="page.features.title" class="!pt-0 mt-20">
       <UPageGrid>
         <ULandingCard
           v-for="(item, index) of page.features.items"
