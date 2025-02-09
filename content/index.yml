@@ -16,11 +16,10 @@ hero:
 features:
   title: 'Популярные товары'
   links:
-    - label: 'Пеpемычки брусковые по сер.1.038.1-1.'
-      icon: 'i-simple-icons-nuxtdotjs'
+    - label: 'О компании'
       trailingIcon: 'i-heroicons-arrow-right-20-solid'
       color: 'gray'
-      to: 'https://ui.nuxt.com/pro'
+      to: '/about'
       target: '_blank'
       size: lg
   items:
