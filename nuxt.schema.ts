@@ -173,7 +173,7 @@ export default defineNuxtSchema({
       }
     }),
     toc: group({
-      title: 'Table of contents',
+      title: 'Содержимое страницы',
       description: 'TOC configuration.',
       icon: 'i-mdi-table-of-contents',
       fields: {

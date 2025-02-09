@@ -10,7 +10,7 @@ export default defineAppConfig({
     }
   },
   seo: {
-    siteName: 'Nuxt UI Pro - Docs template'
+    siteName: 'Железобетон62'
   },
   header: {
     logo: {
@@ -51,28 +51,28 @@ export default defineAppConfig({
       'target': '_blank',
       'aria-label': 'Nuxt UI on GitHub'
     }]
-  },
-  toc: {
-    title: 'Содержание страницы',
-    bottom: {
-      title: 'Community',
-      edit: 'https://github.com/nuxt-ui-pro/docs/edit/main/content',
-      links: [{
-        icon: 'i-heroicons-star',
-        label: 'Star on GitHub',
-        to: 'https://github.com/nuxt/ui',
-        target: '_blank'
-      }, {
-        icon: 'i-heroicons-book-open',
-        label: 'Nuxt UI Pro docs',
-        to: 'https://ui.nuxt.com/pro/guide',
-        target: '_blank'
-      }, {
-        icon: 'i-simple-icons-nuxtdotjs',
-        label: 'Purchase a license',
-        to: 'https://ui.nuxt.com/pro/purchase',
-        target: '_blank'
-      }]
-    }
   }
+  // toc: {
+  //   title: 'Содержание страницы',
+  //   bottom: {
+  //     title: 'Community',
+  //     edit: 'https://github.com/nuxt-ui-pro/docs/edit/main/content',
+  //     links: [{
+  //       icon: 'i-heroicons-star',
+  //       label: 'Star on GitHub',
+  //       to: 'https://github.com/nuxt/ui',
+  //       target: '_blank'
+  //     }, {
+  //       icon: 'i-heroicons-book-open',
+  //       label: 'Nuxt UI Pro docs',
+  //       to: 'https://ui.nuxt.com/pro/guide',
+  //       target: '_blank'
+  //     }, {
+  //       icon: 'i-simple-icons-nuxtdotjs',
+  //       label: 'Purchase a license',
+  //       to: 'https://ui.nuxt.com/pro/purchase',
+  //       target: '_blank'
+  //     }]
+  //   }
+  // }
 })
