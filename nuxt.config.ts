@@ -66,21 +66,9 @@ export default defineNuxtConfig({
   runtimeConfig: {
     botToken: process.env.NUXT_BOT_TOKEN,
     chatId: process.env.NUXT_CHAT_ID,
-    public: {
-      ym: process.env.NUXT_PUBLIC_YANDEX_METRIKA_ID,
-      siteUrl: process.env.NUXT_PUBLIC_SITE_URL
-    },
   },
 
   site: {
     url: process.env.NUXT_PUBLIC_SITE_URL
   },
-  build: {
-    transpile: ['jiti']
-  },
-  vite: {
-    optimizeDeps: {
-      include: ['jiti']
-    }
-  }
 });

@@ -16,7 +16,6 @@
           :key="index"
           v-bind="item"
         >
-
         </ULandingCard>
       </UPageGrid>
     </ULandingSection>
