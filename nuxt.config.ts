@@ -77,5 +77,10 @@ export default defineNuxtConfig({
   },
   build: {
     transpile: ['jiti']
+  },
+  vite: {
+    optimizeDeps: {
+      include: ['jiti']
+    }
   }
 });
