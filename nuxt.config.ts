@@ -1,71 +1,73 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  extends: ['@nuxt/ui-pro'],
-
   modules: [
-    '@nuxt/content',
-    '@nuxt/eslint',
-    '@nuxt/fonts',
-    '@nuxt/image',
-    '@nuxt/ui',
-    '@nuxthq/studio',
-    'nuxt-og-image'
+    "@nuxt/content",
+    "@nuxt/eslint",
+    "@nuxt/fonts",
+    "@nuxt/image",
+    "@nuxt/ui",
+    "@nuxthq/studio",
+    "nuxt-og-image",
   ],
+
+  extends: ["@nuxt/ui-pro"],
+
+  plugins: ['@/plugins/yandex-metrika.js'],
 
   hooks: {
     // Define `@nuxt/ui` components as global to use them in `.md` (feel free to add those you need)
-    'components:extend': (components) => {
-      const globals = components.filter(c => ['UButton', 'UIcon'].includes(c.pascalName))
+    "components:extend": (components) => {
+      const globals = components.filter((c) =>
+        ["UButton", "UIcon"].includes(c.pascalName)
+      );
 
-      globals.forEach(c => c.global = true)
-    }
+      globals.forEach((c) => (c.global = true));
+    },
   },
 
   colorMode: {
-    disableTransition: true
+    disableTransition: true,
   },
 
   nitro: {
     prerender: {
-      routes: [
-        '/'
-      ],
-      crawlLinks: true
-    }
+      routes: ["/"],
+      crawlLinks: true,
+    },
   },
 
   routeRules: {
-    '/api/search.json': { prerender: true }
+    "/api/search.json": { prerender: true },
   },
 
   devtools: {
-    enabled: true
+    enabled: true,
   },
 
   typescript: {
-    strict: false
+    strict: false,
   },
 
   future: {
-    compatibilityVersion: 4
+    compatibilityVersion: 4,
   },
 
   eslint: {
     config: {
       stylistic: {
-        commaDangle: 'never',
-        braceStyle: '1tbs'
-      }
-    }
+        commaDangle: "never",
+        braceStyle: "1tbs",
+      },
+    },
   },
 
-  compatibilityDate: '2024-07-11',
+  compatibilityDate: "2024-07-11",
 
   runtimeConfig: {
     botToken: process.env.NUXT_BOT_TOKEN,
     chatId: process.env.NUXT_CHAT_ID,
     public: {
-      // публичные переменные если нужны
-    }
-  }
-})
+      ym: process.env.NUXT_PUBLIC_YANDEX_METRIKA_ID,
+    },
+  },
+});
