@@ -21,14 +21,14 @@ const { header } = useAppConfig();
           class="mr-6"
         />
       </div>
-      <UContentSearchButton aria-placeholder="Поиск" class="hidden lg:flex" />
+      <UContentSearchButton placeholder="Поиск" label="Поиск" class="hidden lg:flex" />
     </template>
 
     <template #right>
       <UContentSearchButton
         v-if="header?.search"
-        :label="null"
         class="lg:hidden"
+        :label="null"
       />
 
       <UColorModeButton v-if="header?.colorMode" />

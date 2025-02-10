@@ -53,6 +53,8 @@ console.log(files);
       <LazyUContentSearch
         :files="files"
         :navigation="navigation"
+        label="Поиск"
+        placeholder="Поиск..."
       />
     </ClientOnly>
 
