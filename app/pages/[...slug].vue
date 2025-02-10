@@ -100,7 +100,7 @@ const productImages = computed(() => {
       <UContentSurround :surround="surround" />
     </UPageBody>
 
-    <template v-if="page.toc !== false" #right>
+    <!-- <template v-if="page.toc !== false" #right>
       <UContentToc :title="toc?.title" :links="page.body?.toc?.links">
         <template v-if="toc?.bottom" #bottom>
           <div
@@ -109,10 +109,10 @@ const productImages = computed(() => {
           >
             <UDivider v-if="page.body?.toc?.links?.length" type="dashed" />
 
-            <!-- <UPageLinks :title="toc.bottom.title" :links="links" /> -->
+            <UPageLinks :title="toc.bottom.title" :links="links" />
           </div>
         </template>
       </UContentToc>
-    </template>
+    </template> -->
   </UPage>
 </template>
