@@ -12,7 +12,7 @@ export default defineNuxtConfig({
 
   extends: ["@nuxt/ui-pro"],
 
-  plugins: ['@/plugins/yandex-metrika.js'],
+  plugins: ['@/plugins/yandex-metrika.client.js'],
 
   hooks: {
     // Define `@nuxt/ui` components as global to use them in `.md` (feel free to add those you need)
@@ -68,6 +68,11 @@ export default defineNuxtConfig({
     chatId: process.env.NUXT_CHAT_ID,
     public: {
       ym: process.env.NUXT_PUBLIC_YANDEX_METRIKA_ID,
+      siteUrl: process.env.NUXT_PUBLIC_SITE_URL
     },
   },
+
+  site: {
+    url: process.env.NUXT_PUBLIC_SITE_URL
+  }
 });
