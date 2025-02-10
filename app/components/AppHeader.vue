@@ -31,7 +31,7 @@ const { header } = useAppConfig();
         :label="null"
       />
 
-      <UColorModeButton v-if="header?.colorMode" />
+      <!-- <UColorModeButton v-if="header?.colorMode" /> -->
     </template>
 
     <template #panel>
