@@ -109,7 +109,7 @@ const productImages = computed(() => {
           >
             <UDivider v-if="page.body?.toc?.links?.length" type="dashed" />
 
-            <UPageLinks :title="toc.bottom.title" :links="links" />
+            <!-- <UPageLinks :title="toc.bottom.title" :links="links" /> -->
           </div>
         </template>
       </UContentToc>
