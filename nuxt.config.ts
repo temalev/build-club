@@ -12,7 +12,7 @@ export default defineNuxtConfig({
 
   extends: ["@nuxt/ui-pro"],
 
-  plugins: ['@/plugins/yandex-metrika.client.js'],
+  // plugins: ['@/plugins/yandex-metrika.client.js'],
 
   hooks: {
     // Define `@nuxt/ui` components as global to use them in `.md` (feel free to add those you need)
