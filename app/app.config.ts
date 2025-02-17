@@ -14,7 +14,7 @@ export default defineAppConfig({
   },
   header: {
     logo: {
-      alt: '',
+      alt: 'logo',
       light: '',
       dark: ''
     },

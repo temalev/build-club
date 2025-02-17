@@ -16,7 +16,6 @@ useSeoMeta({
   description: page.value.description,
   ogDescription: page.value.description,
 });
-
 </script>
 
 <template>
@@ -28,27 +27,25 @@ useSeoMeta({
 
       <img src="/build_club_banner.png" alt="" height="200" />
     </ULandingHero>
-    <ULandingSection :title="about.features.title" class="!pt-0 mt-20">
-      <UPageGrid>
-        <ULandingCard
-          v-for="(item, index) of about.features.items"
-          :key="index"
-          v-bind="item"
-        >
-        </ULandingCard>
-      </UPageGrid>
-    </ULandingSection>
-    <ULandingSection :title="page.features.title" :links="page.features.links">
+  
+    <ULandingSection :title="page.features.title">
       <UPageGrid>
         <ULandingCard
           v-for="(item, index) of page.features.items"
           :key="index"
           v-bind="item"
         >
-          <img
-            :src="item.img"
-            class="w-full rounded-md"
-          />
+          <img :src="item.img" class="w-full rounded-md" />
+        </ULandingCard>
+      </UPageGrid>
+    </ULandingSection>
+    <ULandingSection :title="about.features.title" :links="page.features.links" class="!pt-0 mt-20">
+      <UPageGrid>
+        <ULandingCard
+          v-for="(item, index) of about.features.items"
+          :key="index"
+          v-bind="item"
+        >
         </ULandingCard>
       </UPageGrid>
     </ULandingSection>

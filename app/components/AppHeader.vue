@@ -13,7 +13,7 @@ const { data: page } = await useAsyncData("about", () =>
 <template>
   <UHeader>
     <template #logo>
-      <img src="/logo.svg" alt="" width="50" height="50" />
+      <img src="/logo.svg" alt="logo" width="50" height="50" />
     </template>
 
     <template v-if="header?.search" #center>
