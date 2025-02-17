@@ -5,6 +5,9 @@ const navigation = inject<NavItem[]>("navigation", []);
 
 const { header } = useAppConfig();
 
+const { data: page } = await useAsyncData("about", () =>
+  queryContent("/about").findOne()
+);
 </script>
 
 <template>
@@ -21,7 +24,11 @@ const { header } = useAppConfig();
           class="mr-6"
         />
       </div>
-      <UContentSearchButton placeholder="Поиск" label="Поиск" class="hidden lg:flex" />
+      <UContentSearchButton
+        placeholder="Поиск"
+        label="Поиск"
+        class="hidden lg:flex"
+      />
     </template>
 
     <template #right>
@@ -32,6 +39,37 @@ const { header } = useAppConfig();
       />
 
       <!-- <UColorModeButton v-if="header?.colorMode" /> -->
+      <div class="hidden lg:flex flex-col">
+        <a
+          :href="'tel:' + page.contact.phone.replace(/[^+\d]/g, '')"
+          class="text-primary-500 hover:underline pl-2 whitespace-nowrap"
+        >
+          {{ page.contact.phone }}
+        </a>
+        <a
+          :href="'mailto:' + page.contact.email"
+          class="text-primary-500 hover:underline pl-2"
+        >
+          {{ page.contact.email }}
+        </a>
+      </div>
+
+      <div class="lg:hidden flex gap-3 mr-2" style="height: 20px;">
+        <a
+          :href="'tel:' + page.contact.phone.replace(/[^+\d]/g, '')"
+          aria-label="Позвонить"
+          style="height: 20px;"
+        >
+          <UIcon name="i-heroicons-phone" class="w-5 h-5" />
+        </a>
+        <a
+          :href="'mailto:' + page.contact.email"
+          aria-label="Написать email"
+          style="height: 20px;"
+        >
+          <UIcon name="i-heroicons-envelope" class="w-5 h-5" />
+        </a>
+      </div>
     </template>
 
     <template #panel>

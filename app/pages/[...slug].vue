@@ -61,10 +61,25 @@ const productImages = computed(() => {
   if (!images.value) return []
   return images.value.map(image => `${imagesPath}${image}`)
 })
+
+// const router = useRouter()
+
+// const goBack = () => {
+//   router.back()
+// }
 </script>
 
 <template>
   <UPage>
+    <!-- <UButton
+      icon="i-heroicons-arrow-left"
+      variant="ghost"
+      class="mt-2 md:hidden"
+      @click="goBack"
+    >
+      Назад
+    </UButton> -->
+
     <div class="mb-6 mt-6">
       <h1 class="text-3xl font-bold">{{ page.title }}</h1>
       <p v-if="page.description" class="mt-2 text-gray-500">{{ page.description }}</p>

@@ -9,18 +9,7 @@
       </template>
     </ULandingHero> -->
 
-    <ULandingSection :title="page.features.title" class="!pt-0 mt-20">
-      <UPageGrid>
-        <ULandingCard
-          v-for="(item, index) of page.features.items"
-          :key="index"
-          v-bind="item"
-        >
-        </ULandingCard>
-      </UPageGrid>
-    </ULandingSection>
-
-    <ULandingSection v-if="page.contact" :title="page.contact.title" class="!pt-0">
+    <ULandingSection v-if="page.contact" :title="page.contact.title" class="pt-5">
       <UContainer>
         <div class="space-y-4">
           <p><strong>Адрес:</strong> {{ page.contact.address }}</p>
