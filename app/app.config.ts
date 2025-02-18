@@ -19,7 +19,7 @@ export default defineAppConfig({
       dark: ''
     },
     search: true,
-    colorMode: true,
+    colorMode: false,
     links: [{
       'icon': 'i-simple-icons-github',
       'to': 'https://github.com/nuxt-ui-pro/docs',
