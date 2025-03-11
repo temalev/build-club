@@ -28,6 +28,11 @@ features:
 contact:
   title: 'Контакты'
   address: 'г. Рязань, ул. Магистральная, д. 11'
-  phone: '+7(915) 602-28-96'
+  phone: '+7(910) 565-94-32'
+  secondPhone: '+7(915) 602-28-96'
   email: 'zhelezobeton62@yandex.ru'
   workingHours: 'Пн-Пт: 9:00-18:00, Сб: 9:00-15:00'
+  companyName: 'ООО "ЖЕЛЕЗОБЕТОН62"'
+  inn: 6200012004
+  kpp: 620001001
+  ogrn: 1256200001232

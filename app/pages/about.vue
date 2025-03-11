@@ -20,6 +20,12 @@
               class="text-primary-500 hover:underline pl-2"
             >
               {{ page.contact.phone }}
+            </a> ,
+            <a 
+              :href="'tel:' + page.contact.secondPhone.replace(/[^+\d]/g, '')" 
+              class="text-primary-500 hover:underline pl-2"
+            >
+              {{ page.contact.secondPhone }}
             </a>
           </p>
           <p>
@@ -32,6 +38,14 @@
             </a>
           </p>
           <p><strong>Режим работы:</strong> {{ page.contact.workingHours }}</p>
+        </div>
+      </UContainer>
+      <UContainer>
+        <div class="space-y-4">
+          <p><strong>Организация:</strong> {{ page.contact.companyName }}</p>
+          <p><strong>ИНН:</strong> {{ page.contact.inn }}</p>
+          <p><strong>КПП:</strong> {{ page.contact.kpp }}</p>
+          <p><strong>ОГРН:</strong> {{ page.contact.ogrn }}</p>
         </div>
       </UContainer>
     </ULandingSection>
