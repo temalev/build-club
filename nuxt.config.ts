@@ -1,4 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+console.log(
+  'botToken', process.env.NUXT_BOT_TOKEN,
+    'chatId', process.env.NUXT_CHAT_ID
+)
+
 export default defineNuxtConfig({
   modules: [
     "@nuxt/content",
