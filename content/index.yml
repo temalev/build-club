@@ -3,7 +3,7 @@ description: Стройматериалы по доступным ценам
 navigation: false
 hero:
   title: 'Железобетон62'
-  description: 'стройматериалы по доступным ценам'
+  description: 'ЖБИ по доступным ценам'
   orientation: horizontal
   headline:
     label: Made with Nuxt UI Pro
