@@ -24,14 +24,12 @@ useHead({
 useSeoMeta({
   titleTemplate: `%s - ${seo?.siteName}`,
   ogSiteName: seo?.siteName,
-  ogImage: 'https://docs-template.nuxt.dev/social-card.png',
-  twitterImage: 'https://docs-template.nuxt.dev/social-card.png',
+  ogImage: 'https://xn--62-9kcpabdk8ayic5c.xn--p1ai/build_club.png',
+  twitterImage: 'https://xn--62-9kcpabdk8ayic5c.xn--p1ai/build_club.png',
   twitterCard: 'summary_large_image'
 })
 
 provide('navigation', navigation)
-
-console.log(files);
 
 </script>
 
