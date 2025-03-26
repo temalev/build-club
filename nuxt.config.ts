@@ -31,7 +31,9 @@ export default defineNuxtConfig({
   },
 
   colorMode: {
-    disableTransition: true,
+    preference: 'light', // Принудительно включаем светлую тему
+    fallback: 'light',   // Запасной вариант
+    classSuffix: '',     // Отключаем классы `dark`
   },
 
   nitro: {
@@ -46,7 +48,7 @@ export default defineNuxtConfig({
   },
 
   devtools: {
-    enabled: true,
+    enabled: false,
   },
 
   typescript: {

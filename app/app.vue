@@ -17,7 +17,7 @@ useHead({
     { rel: 'icon', href: '/favicon.ico' }
   ],
   htmlAttrs: {
-    lang: 'en'
+    lang: 'ru'
   }
 })
 
@@ -47,7 +47,7 @@ provide('navigation', navigation)
 
     <AppFooter />
     <div class="flex flex-col items-center mb-10">
-      <h3 class="text-gray-900 dark:text-white text-base font-bold truncate mb-5">Сертификаты</h3>
+      <h3 class="text-gray-900 text-base font-bold truncate mb-5">Сертификаты</h3>
       <img class="rounded-lg" src="public/certificates/cert.webp" width="600px" alt="">
     </div>  
 
