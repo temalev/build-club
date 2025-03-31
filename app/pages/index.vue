@@ -20,7 +20,7 @@ useSeoMeta({
 
 <template>
   <div>
-    <ULandingHero v-if="page.hero" v-bind="page.hero">
+    <ULandingHero v-if="page.hero" v-bind="page.hero" class="py-16">
       <template #title>
         <MDC :value="page.hero.title" />
       </template>
