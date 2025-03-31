@@ -8,7 +8,6 @@ console.log(navigation.value);
 
 navigation.value[2] = {
   title: 'Прайс-лист',
-    icon: 'i-simple-icons-github',
     to: '/price/price.pdf',
     target: '_blank'
 }
