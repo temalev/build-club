@@ -26,8 +26,19 @@ useSeoMeta({
       </template>
 
       <img src="/build_club_banner.png" alt="" height="200" />
+
+      <!-- <UButton to="/price/price.pdf" target="_blank" >Прайс-лист</UButton> -->
+      <UPageCard
+        title="Прайс-лист"
+        description="Актуальные цены на основные позиции"
+        icon="material-symbols:currency-ruble"
+        to="/price/price.pdf"
+        target="_blank"
+        variant="soft"
+        class="lg:hidden"
+      />
     </ULandingHero>
-  
+
     <ULandingSection :title="page.features.title">
       <UPageGrid>
         <ULandingCard
@@ -39,7 +50,11 @@ useSeoMeta({
         </ULandingCard>
       </UPageGrid>
     </ULandingSection>
-    <ULandingSection :title="about.features.title" :links="page.features.links" class="!pt-0 mt-20">
+    <ULandingSection
+      :title="about.features.title"
+      :links="page.features.links"
+      class="!pt-0 mt-20"
+    >
       <UPageGrid>
         <ULandingCard
           v-for="(item, index) of about.features.items"
