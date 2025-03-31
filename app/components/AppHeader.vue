@@ -1,13 +1,31 @@
-<script setup lang="ts">
+<script setup lang="ts">  
+import {onMounted} from 'vue'
 import type { NavItem } from "@nuxt/content";
 
-const navigation = inject<NavItem[]>("navigation", []);
+const navigation = inject<Ref<NavItem[]>>("navigation", []);
+
+console.log(navigation.value);
+
+navigation.value[2] = {
+  title: 'Прайс-лист',
+    icon: 'i-simple-icons-github',
+    to: '/price/price.pdf',
+    target: '_blank'
+}
+    
+  // navigation.value.push({
+  //   title: 'Прайс-лист',
+  //   icon: 'i-simple-icons-github',
+  //   to: '/price/price.pdf',
+  //   target: '_blank'
+  // });
 
 const { header } = useAppConfig();
 
 const { data: page } = await useAsyncData("about", () =>
   queryContent("/about").findOne()
 );
+
 </script>
 
 <template>
