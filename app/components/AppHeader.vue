@@ -8,8 +8,8 @@ console.log(navigation.value);
 
 navigation.value[2] = {
   title: 'Прайс-лист',
-    to: '/price/price.pdf',
-    target: '_blank'
+  to: '/price/price.pdf',
+  target: '_blank'
 }
     
   // navigation.value.push({

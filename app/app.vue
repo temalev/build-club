@@ -31,6 +31,10 @@ useSeoMeta({
 
 provide('navigation', navigation)
 
+const openPdf = () => {
+  window.open('/price/price.pdf', '_blank', 'noopener,noreferrer')
+}
+
 </script>
 
 <template>
@@ -61,5 +65,46 @@ provide('navigation', navigation)
     </ClientOnly>
 
     <UNotifications />
+    <div class="floating-action-button" @click="openPdf">
+      Прайс
+    </div>
   </div>
 </template>
+
+<style scoped>
+.floating-action-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background-color: #e60c0c;
+  text-align: center;
+  align-content: center;
+  font-size: 13px;
+  color: #fff;
+  opacity: .8;
+  cursor: pointer;
+  font-weight: 500;
+  animation: show .8s forwards;
+}
+
+.floating-action-button:hover {
+  background-color: #c10a0a;
+  box-shadow: 0 5px 20px 5px #00000072;
+}
+
+@keyframes show {
+  from {
+    right: -100px;
+    opacity: 0;
+  }
+  to {
+    right: 20px;
+    opacity: 0.8;
+    box-shadow: 0 5px 20px 5px #0000003a;
+  }
+}
+
+</style>
