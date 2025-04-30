@@ -55,7 +55,7 @@ Email: ${formData.value.email}
     <template #top>
       <div class="w-full mx-auto grid md:grid-cols-2 gap-6">
         <!-- Блок с продуктами -->
-        <div class="mb-4 md:mb-6 offers h-fit">
+        <div data-aos="fade-right" class="mb-4 md:mb-6 offers h-fit">
           <h3 class="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-gray-800 text-left">
             МЫ ПРЕДЛАГАЕМ:
           </h3>
@@ -67,7 +67,7 @@ Email: ${formData.value.email}
         </div>
 
         <!-- Форма обратной связи -->
-        <div class="offers h-fit">
+        <div data-aos="fade-left" class="offers h-fit">
           <h3 class="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-gray-800 text-left">
             ОСТАВИТЬ ЗАЯВКУ:
           </h3>
@@ -100,7 +100,7 @@ Email: ${formData.value.email}
           </form>
         </div>
 
-        <div style="
+        <div data-aos="flip-left" style="
             height: 440px;
             overflow: hidden;
             position: relative;
@@ -134,7 +134,7 @@ Email: ${formData.value.email}
             ">Железобетон62 на карте Рязани — Яндекс Карты</a>
         </div>
 
-        <div style="position: relative; overflow: hidden">
+        <div data-aos="flip-right" style="position: relative; overflow: hidden">
           <a href="https://yandex.ru/maps/org/zhelezobeton62/158897590586/?utm_medium=mapframe&utm_source=maps"
             style="color: #eee; font-size: 12px; position: absolute; top: 0px">Железобетон62</a><a
             href="https://yandex.ru/maps/11/ryazan/category/precast_concrete/184107681/?utm_medium=mapframe&utm_source=maps"

@@ -16,11 +16,12 @@ useSeoMeta({
   description: page.value.description,
   ogDescription: page.value.description,
 });
+
 </script>
 
 <template>
   <div>
-    <ULandingHero v-if="page.hero" v-bind="page.hero" class="py-16">
+    <ULandingHero data-aos="fade-up" v-if="page.hero" v-bind="page.hero" class="py-16">
       <template #title>
         <MDC :value="page.hero.title" />
       </template>
@@ -42,6 +43,7 @@ useSeoMeta({
     <ULandingSection :title="page.features.title">
       <UPageGrid>
         <ULandingCard
+        data-aos="fade-up"
           v-for="(item, index) of page.features.items"
           :key="index"
           v-bind="item"
@@ -57,6 +59,7 @@ useSeoMeta({
     >
       <UPageGrid>
         <ULandingCard
+        data-aos="fade-up"
           v-for="(item, index) of about.features.items"
           :key="index"
           v-bind="item"

@@ -1,4 +1,10 @@
 <script setup lang="ts">
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
+onMounted(() => {
+  AOS.init()
+})
 import type { ParsedContent } from '@nuxt/content'
 
 const { seo } = useAppConfig()
